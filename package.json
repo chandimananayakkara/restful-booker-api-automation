@@ -1,0 +1,31 @@
+{
+  "name": "restful-booker-api-automation",
+  "version": "1.0.0",
+  "description": "REST API Test Automation Framework using Playwright &amp; Typescript",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "playwright": "^1.61.1",
+    "playwright-core": "^1.61.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.2",
+    "zod": "^4.4.3"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandimananayakkara/restful-booker-api-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chandimananayakkara/restful-booker-api-automation/issues"
+  },
+  "homepage": "https://github.com/chandimananayakkara/restful-booker-api-automation#readme"
+}

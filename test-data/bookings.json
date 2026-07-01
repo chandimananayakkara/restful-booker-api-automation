@@ -1,0 +1,44 @@
+{
+  "validBooking": {
+    "firstname": "John",
+    "lastname": "Doe",
+    "totalprice": 150,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-01-01",
+      "checkout": "2026-01-05"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "updatedBooking": {
+    "firstname": "Jane",
+    "lastname": "Smith",
+    "totalprice": 250,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-06-01",
+      "checkout": "2026-06-10"
+    },
+    "additionalneeds": "Lunch"
+  },
+  "partialUpdate": {
+    "firstname": "Updated_Name",
+    "totalprice": 999
+  },
+  "invalidBooking": {
+    "firstname": "",
+    "lastname": "",
+    "totalprice": -100,
+    "depositpaid": "not_boolean"
+  },
+  "auth": {
+    "validCredentials": {
+      "username": "admin",
+      "password": "password123"
+    },
+    "invalidCredentials": {
+      "username": "wrong_user",
+      "password": "wrong_pass"
+    }
+  }
+}
