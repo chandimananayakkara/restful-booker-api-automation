@@ -17,7 +17,7 @@ export class AuthClient {
     return response;
   }
 
-  async getValidToken():Promise<void>{
+  async getValidToken():Promise<string>{
     const response = await this.createToken('admin', 'password123')
     const body = await response.json()
     return body.token
