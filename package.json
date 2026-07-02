@@ -15,7 +15,21 @@
     "allure-playwright": "^3.10.2",
     "zod": "^4.4.3"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep '@smoke'",
+    "test:critical": "npx playwright test --grep '@critical'",
+    "test:regression": "npx playwright test --grep '@regression'",
+    "test:health": "npx playwright test tests/health/",
+    "test:auth": "npx playwright test tests/auth/",
+    "test:booking": "npx playwright test tests/booking/",
+    "test:contract": "npx playwright test tests/contract/",
+    "test:negative": "npx playwright test tests/negative/",
+    "report": "npx playwright show-report",
+    "report:allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "report:allure:open": "npx allure open allure-report",
+    "report:allure": "npm run report:allure:generate && npm run report:allure:open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chandimananayakkara/restful-booker-api-automation.git"
