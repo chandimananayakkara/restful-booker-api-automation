@@ -49,8 +49,62 @@ a hotel booking management system. The project demonstrates a
 
 ## 🏗️ Architecture
 
-┌─────────────────────────────────────────────────────────────┐ │               TEST LAYER │ │ │ │ 
-tests/health/ tests/auth/ tests/booking/ │ │ tests/contract/ tests/negative/ │ │ │ ├─────────────────────────────────────────────────────────────┤ │ FIXTURE LAYER │ │ │ │ api-fixtures.ts │ │ (authClient, bookingClient, authToken) │ │ │ ├────────────────────────┬────────────────────────────────────┤ │ API CLIENT LAYER │ SCHEMA LAYER │ │ │ │ │ AuthClient.ts │ booking.schema.ts │ │ BookingClient.ts │ (Zod validation schemas) │ │ │ │ ├────────────────────────┴────────────────────────────────────┤ │ UTILITY LAYER │ │ │ │ api-helpers.ts │ │ (data generators, schema validators, date helpers) │ │ │ ├─────────────────────────────────────────────────────────────┤ │ PLAYWRIGHT API ENGINE │ │ │ │ APIRequestContext (HTTP requests — no browser needed) │ │ Auto-retry | Parallel execution | Built-in reporting │ │ │ └─────────────────────────────────────────────────────────────┘
+restful-booker-api-automation/
+├── .github/
+│   └── workflows/
+│       └── playwright.yml
+├── .gitignore
+├── allure-results/
+│   ├── 08566e53-a159-42dd-94af-3ea7bcb8f898-result.json
+│   ├── 13995450-5cc9-4851-99ca-abe5eaaf96f9-result.json
+│   ├── 1ab881ba-2ae7-4596-8486-d388981e17bf-result.json
+│   ├── 2b5d0f41-8ac6-499f-82ef-4cbfe8b3751b-result.json
+│   ├── 2dce10b2-5591-48e9-b310-12ca02477dcf-result.json
+│   ├── 3533995a-dc32-4220-939d-22c581845ed7-result.json
+│   ├── 3585facf-c8ba-4085-abac-247e74bfe584-result.json
+│   ├── 41e2f0db-202d-4b38-854c-041bace5ca45-result.json
+│   ├── 4883be91-873b-472f-9571-75b57f40fa06-result.json
+│   ├── 4cda1847-26ee-45dc-9788-9386f7fc3a57-result.json
+│   ├── 50af83d2-cf4e-4e7c-8084-6c4bfe4e53d0-result.json
+│   ├── 573ef123-c705-4058-9982-0b92f7e513a7-result.json
+│   ├── 790f980a-4791-4810-b0e2-b4c8f7dd74d8-result.json
+│   ├── 9971e069-7860-42e0-83fb-e9c4a14e7823-result.json
+│   ├── 9f878b01-ee7b-423e-a118-8ae5650140ef-result.json
+│   ├── a8dfff55-b4e6-4ddd-a60c-d1e32e9aa140-result.json
+│   ├── bee723d1-d4f6-49a3-ae55-4efc2f897ff4-result.json
+│   ├── c783a3ef-e420-4205-a902-d28062d24174-result.json
+│   ├── dbb52a08-d31d-48ca-964b-c54ca1e734a0-result.json
+│   ├── dd8d8058-0d7a-45ef-b67b-5a96fe3bec8c-result.json
+│   ├── e4e46f27-15ec-4aaf-a06c-8c5e22ac1203-result.json
+│   ├── e7ed2a1e-0f33-41ae-9f75-945c5eb114ab-result.json
+│   └── eadeca93-cc34-4348-9e3a-163cddbf3107-result.json
+├── package-lock.json
+├── package.json
+├── playwright.config.ts
+├── README.md
+├── src/
+│   ├── api/
+│   │   ├── AuthClient.ts
+│   │   └── BookingClient.ts
+│   ├── fixtures/
+│   │   └── api-fixtures.ts
+│   ├── schemas/
+│   │   └── booking.schema.ts
+│   └── utils/
+│       └── api-helpers.ts
+├── test-data/
+│   └── bookings.json
+└── tests/
+    ├── auth/
+    │   └── auth.spec.ts
+    ├── booking/
+    │   ├── crud.spec.ts
+    │   └── filter.spec.ts
+    ├── contract/
+    │   └── schema-validation.spec.ts
+    ├── example.spec.ts
+    └── health/
+        └── health-check.spec.ts
 
 
 ### Key Design Decisions
